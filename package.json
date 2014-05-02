@@ -1,6 +1,6 @@
 {
     "name": "patch-package-json",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Patch the tarball address in a package.json from the registry",
     "main": "patch.js",
     "scripts": {
