@@ -1,23 +1,23 @@
 {
-    "name": "patch-package-json",
-    "version": "0.0.1",
-    "description": "Patch the tarball address in a package.json from the registry",
-    "main": "patch.js",
-    "scripts": {
-        "test": "istanbul cover --print both -- vows --spec ./tests/*.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/davglass/patch-package-json.git"
-    },
-    "author": "Dav Glass <davglass@gmail.com>",
-    "license": "BSD",
-    "bugs": {
-        "url": "https://github.com/davglass/patch-package-json/issues"
-    },
-    "homepage": "https://github.com/davglass/patch-package-json",
-    "devDependencies": {
-        "vows": "~0.7.0",
-        "istanbul": "~0.2.8"
-    }
+  "name": "patch-package-json",
+  "version": "0.0.2",
+  "description": "Patch the tarball address in a package.json from the registry",
+  "main": "patch.js",
+  "scripts": {
+    "test": "istanbul cover --print both -- vows --spec ./tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davglass/patch-package-json.git"
+  },
+  "author": "Dav Glass <davglass@gmail.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/davglass/patch-package-json/issues"
+  },
+  "homepage": "https://github.com/davglass/patch-package-json",
+  "devDependencies": {
+    "vows": "~0.7.0",
+    "istanbul": "~0.2.8"
+  }
 }
