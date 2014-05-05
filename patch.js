@@ -21,6 +21,9 @@ var modPath = function(tarball, currentHost) {
 exports.url = modPath;
 
 var patchPath = function(json, host) {
+    if (!json) {
+        return json;
+    }
     if (typeof json === 'string') {
         json = JSON.parse(json);
     }

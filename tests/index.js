@@ -87,6 +87,14 @@ var tests = {
             assert.equal(d.dist.tarball, 'http://registry.davglass.com/foo/-/foo-1.0.1.tar.gz');
         }
     },
+    'should return null if given null': {
+        topic: function() {
+            return patch.json(null, 'registry.davglass.com');
+        },
+        'and return null': function(d) {
+            assert.isNull(d);
+        }
+    },
     'should parse full json': {
         topic: function() {
             return patch.json(JSON.stringify(JSON2), 'registry.davglass.com');
