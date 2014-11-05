@@ -33,7 +33,7 @@ var patchPath = function(json, host) {
         }
     };
 
-    if (json.versions) {
+    if (json.versions && typeof json.versions === 'object') {
         Object.keys(json.versions).forEach(function (v) {
             patch(json.versions[v]);
         });
