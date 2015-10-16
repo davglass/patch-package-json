@@ -55,12 +55,28 @@ var tests = {
             assert.equal(d, 'http://registry.davglass.com/foo/-/foo-1.0.1.tar.gz');
         }
     },
+    'should parse good url with http and subdirectory': {
+        topic: function() {
+            return patch.url(tarball, 'http://registry.davglass.com/subdir');
+        },
+        'and return valid info': function(d) {
+            assert.equal(d, 'http://registry.davglass.com/subdir/foo/-/foo-1.0.1.tar.gz');
+        }
+    },
     'should parse good url with https': {
         topic: function() {
             return patch.url(tarball, 'https://registry.davglass.com');
         },
         'and return valid info': function(d) {
             assert.equal(d, 'https://registry.davglass.com/foo/-/foo-1.0.1.tar.gz');
+        }
+    },
+    'should parse good url with https and subdirectory': {
+        topic: function() {
+            return patch.url(tarball, 'https://registry.davglass.com/subdir');
+        },
+        'and return valid info': function(d) {
+            assert.equal(d, 'https://registry.davglass.com/subdir/foo/-/foo-1.0.1.tar.gz');
         }
     },
     'should parse good url with no protocol': {
@@ -71,12 +87,28 @@ var tests = {
             assert.equal(d, 'http://registry.davglass.com/foo/-/foo-1.0.1.tar.gz');
         }
     },
+    'should parse good url with no protocol and subdirectory': {
+        topic: function() {
+            return patch.url(tarball, 'http://registry.davglass.com/subdir');
+        },
+        'and return valid info': function(d) {
+            assert.equal(d, 'http://registry.davglass.com/subdir/foo/-/foo-1.0.1.tar.gz');
+        }
+    },
     'should parse good url with port': {
         topic: function() {
             return patch.url(tarball, 'http://registry.davglass.com:8080/');
         },
         'and return valid info': function(d) {
             assert.equal(d, 'http://registry.davglass.com:8080/foo/-/foo-1.0.1.tar.gz');
+        }
+    },
+    'should parse good url with port and subdirectory': {
+        topic: function() {
+            return patch.url(tarball, 'http://registry.davglass.com:8080/subdir');
+        },
+        'and return valid info': function(d) {
+            assert.equal(d, 'http://registry.davglass.com:8080/subdir/foo/-/foo-1.0.1.tar.gz');
         }
     },
     'should parse simple json': {

@@ -15,6 +15,9 @@ var modPath = function(tarball, currentHost) {
     if (h.port) {
         u.port = h.port;
     }
+    if(h.pathname != '/') {
+        u.pathname = h.pathname + u.pathname
+    }
     return url.format(u);
 };
 
